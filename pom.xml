@@ -23,6 +23,7 @@
     <modules>
         <module>eureka_server</module>
         <module>first_service</module>
+        <module>ribbon_service</module>
     </modules>
 
     <properties>

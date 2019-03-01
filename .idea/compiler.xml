@@ -9,12 +9,20 @@
         <module name="eruka_server" />
         <module name="eureka_server" />
         <module name="first_service" />
+        <module name="order_service" />
+        <module name="product_service" />
+        <module name="ribbon_service" />
+        <module name="service_ribbon" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="eruka_server" target="1.8" />
       <module name="eureka_server" target="1.8" />
-      <module name="first_service" target="1.8" />
+      <module name="first_service" target="1.5" />
+      <module name="order_service" target="1.8" />
+      <module name="product_service" target="1.8" />
+      <module name="ribbon_service" target="1.8" />
+      <module name="service_ribbon" target="1.5" />
       <module name="springcloud_root" target="1.8" />
     </bytecodeTargetLevel>
   </component>
