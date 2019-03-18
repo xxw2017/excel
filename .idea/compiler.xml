@@ -6,24 +6,23 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eruka_server" />
         <module name="eureka_server" />
-        <module name="first_service" />
         <module name="order_service" />
-        <module name="product_service" />
+        <module name="product_service_feign" />
+        <module name="product_service_ribbon" />
         <module name="ribbon_service" />
-        <module name="service_ribbon" />
+        <module name="zuul_service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="eruka_server" target="1.8" />
       <module name="eureka_server" target="1.8" />
-      <module name="first_service" target="1.5" />
       <module name="order_service" target="1.8" />
-      <module name="product_service" target="1.8" />
+      <module name="product_service_feign" target="1.8" />
+      <module name="product_service_ribbon" target="1.8" />
       <module name="ribbon_service" target="1.8" />
-      <module name="service_ribbon" target="1.5" />
       <module name="springcloud_root" target="1.8" />
+      <module name="zuul" target="1.8" />
+      <module name="zuul_service" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

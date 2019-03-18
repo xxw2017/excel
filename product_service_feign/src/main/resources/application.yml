@@ -1,15 +1,24 @@
+
 server:
-  port: 8763
+  port: 8764
 
 spring:
   application:
-    name: orderService
+    name: productServiceFeign
 
+#配置注册中心
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+
+  #配置服务显示名称
   instance:
     hostname: ${spring.cloud.client.ip-address}
     instance-id: ${spring.cloud.client.ip-address}:${server.port}
     prefer-ip-address: true
+
+#启动feign自带熔断器
+feign:
+  hystrix:
+    enabled: true

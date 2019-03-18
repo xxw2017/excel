@@ -22,8 +22,9 @@
 
     <modules>
         <module>eureka_server</module>
-        <module>first_service</module>
-        <module>ribbon_service</module>
+        <module>product_service_ribbon</module>
+        <module>product_service_feign</module>
+        <module>order_service</module>
     </modules>
 
     <properties>
