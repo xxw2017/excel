@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
-@EnableEurekaClient
 @EnableDiscoveryClient
 @RestController
 public class OrderServiceApplication {

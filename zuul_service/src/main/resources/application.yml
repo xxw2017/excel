@@ -1,7 +1,12 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
+ #配置服务显示名称
+  instance:
+    hostname: ${spring.cloud.client.ip-address}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
+    prefer-ip-address: true
 
 server:
   port: 8766
@@ -13,8 +18,27 @@ spring:
 zuul:
   routes:
     api-a:
-      path: /api-a/**
-      serviceId: productserviceFeign
+      path: /feign/**
+      serviceId: productServiceFeign
     api-b:
-      path: /api-b/**
-      serviceId: productserviceRibbon
+      path: /ribbon/**
+      serviceId: productServiceRibbon
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+
+##timeout config
+ribbon:
+  ReadTimeout: 13000
+  ConnectTimeout: 13000
+  eureka:
+    enable: true
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeout-in-milliseconds: 3000
+

@@ -15,10 +15,10 @@ import org.springframework.web.client.RestTemplate;
 @EnableEurekaClient
 @EnableFeignClients
 @EnableHystrix
-public class ProductServiceApplication {
+public class ProductServiceFeignApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
+		SpringApplication.run(ProductServiceFeignApplication.class, args);
 	}
 
     @Bean

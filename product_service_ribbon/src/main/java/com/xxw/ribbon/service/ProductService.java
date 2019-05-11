@@ -15,10 +15,11 @@ public class ProductService {
     @Autowired
     RestTemplate restTemplate;
 
-    @HystrixCommand(fallbackMethod = "doError" )
+    @HystrixCommand(fallbackMethod = "doError")
     public String productService(String productName){
-       // return restTemplate.getForObject("http://localhost:8762/order?productName="+productName,String.class);
-        return restTemplate.getForObject("http://orderService/order?productName="+productName,String.class);
+        //通过服务名就可访问
+        String url="http://orderService/order?productName=ribbon"+productName;
+        return restTemplate.getForObject(url,String.class);
     }
 
 

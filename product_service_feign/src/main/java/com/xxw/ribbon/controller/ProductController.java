@@ -1,7 +1,6 @@
 package com.xxw.ribbon.controller;
 
 import com.xxw.ribbon.service.ProductFeignClient;
-import com.xxw.ribbon.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,8 +12,6 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class ProductController {
-    @Autowired
-    ProductService productService;
 
     @Autowired
     ProductFeignClient productFeignClient;
@@ -26,7 +23,7 @@ public class ProductController {
      */
     @RequestMapping("/productOrder")
     public String productOrder(@RequestParam String productName){
-        return productFeignClient.order(productName);
+        return productFeignClient.order("feign"+productName);
     }
 
 }

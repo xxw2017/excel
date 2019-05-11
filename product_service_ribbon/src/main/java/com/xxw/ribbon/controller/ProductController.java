@@ -24,4 +24,6 @@ public class ProductController {
     public String productOrder(@RequestParam String productName){
         return productService.productService(productName);
     }
+
+
 }

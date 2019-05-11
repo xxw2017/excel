@@ -11,12 +11,11 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableEurekaClient
 @EnableHystrix
-public class ProductServiceApplication {
+public class ProductServiceRibbonApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProductServiceApplication.class, args);
+		SpringApplication.run(ProductServiceRibbonApplication.class, args);
 	}
 
     @Bean
